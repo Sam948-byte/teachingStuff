@@ -60,8 +60,6 @@ public class RobotContainer {
   // private static final OuttakeCommand m_outtakeCommand = new
   // OuttakeCommand(m_intakeSubsystem);
 
-  private static final ServoSubsystem m_servoSubsystem = new ServoSubsystem();
-  private static final ServoCommand m_servoCommand = new ServoCommand(m_servoSubsystem);
 
   private static final ShooterSubsystem m_shooterSubsystem = new ShooterSubsystem();
   private static final HighShooterCommand m_highShooterCommand = new HighShooterCommand(m_shooterSubsystem, m_servoSubsystem);
@@ -99,7 +97,7 @@ public class RobotContainer {
     new Button(filteredController::getLeftBumper).whileHeld(m_outtakeCommand);
     new Button(filteredController::getRightTriggerActive).whileHeld(m_highShooterCommand);
     new Button(filteredController::getRightBumper).whileHeld(m_lowShooterCommand);
-    new Button(filteredController::getAButton).whileHeld(m_servoCommand);
+
     new Button(filteredController::getYButton).whileHeld(m_ejectCommand);
     new Button(filteredController::getPOVPressed).whenActive(new Runnable() {
       @Override

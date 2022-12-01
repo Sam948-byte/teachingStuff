@@ -92,12 +92,6 @@ public final class Constants {
             public static final double INTAKE_SPEED = 1.0;
         }
 
-        public final class servo {
-            // These are the positions that the servo opens to
-            public static final double OPEN_POS = 0.2;
-            public static final double CLOSED_POS = 0.4;
-        }
-
         public final class shooter {
             // These are constant speeds when the shooter is activated
             public static final double HIGH_TOP_SPEED = 0.35;
